@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AdventureWorks Sales Analytics | Samuel Bridge</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Samuel Bridge</h1>
+            <p>Business Intelligence Developer</p>
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="#overview">Overview</a>
+                <a href="#modelling">Data Modelling</a>
+                <a href="#sql">SQL</a>
+            </nav>
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- PROJECT INTRO -->
+        <section class="hero">
+
+            <div class="container">
+
+                <h2>AdventureWorks Sales Analytics</h2>
+
+                <p>
+                    An end-to-end SQL and Power BI sales analytics project
+                    using the AdventureWorks2022 dataset. The project
+                    demonstrates relational data preparation, star-schema
+                    modelling, DAX measures and advanced SQL analytical
+                    techniques.
+                </p>
+
+                <div class="tags">
+                    <span>SQL Server</span>
+                    <span>Power BI</span>
+                    <span>DAX</span>
+                    <span>Power Query</span>
+                    <span>Data Modelling</span>
+                    <span>Window Functions</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROJECT OVERVIEW -->
+        <section id="overview">
+
+            <div class="container">
+
+                <h2>Project Overview</h2>
+
+                <p>
+                    The aim of this project was to build an interactive sales
+                    reporting solution that allows users to explore overall
+                    sales performance, product performance, customer behaviour
+                    and territory performance.
+                </p>
+
+                <p>
+                    The underlying AdventureWorks relational database was
+                    transformed into a reporting data model before
+                    being brought into Power BI. The final report combines
+                    interactive DAX-based analysis with additional SQL
+                    analysis using CTEs and window functions.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- DATA MODELLING -->
+        <section id="modelling">
+
+            <div class="container">
+
+                <h2>Data Modelling</h2>
+
+                <p>
+                    The Power BI model was designed using a star-schema
+                    approach, with sales transactions stored at order-line
+                    level in a central fact table and descriptive attributes
+                    separated into dimension tables.
+                </p>
+
+                <div class="project">
+
+                    <div class="project-content">
+
+                        <h3>Star Schema</h3>
+
+                        <p>
+                            The core model consists of a central sales fact
+                            table connected to dedicated dimensions for
+                            customers, products, territories, salespeople
+                            and dates.
+                        </p>
+
+                        <ul>
+                            <li><strong>Sales_view</strong> – sales transactions at order-line grain</li>
+                            <li><strong>Date</strong> – calendar and time intelligence</li>
+                            <li><strong>Product view</strong> – products, categories and subcategories</li>
+                            <li><strong>Customer view</strong> – customer information</li>
+                            <li><strong>Territory view</strong> – geographical sales information</li>
+                            <li><strong>Sales person view</strong> – salesperson information</li>
+                            <li><strong>Product performance view</strong>  An SQL view using CTEs and window functions to analyse product performance.AdventureWorks.html</li>
+                        </ul>
+
+                        <p>
+                            Relationships use single-direction filtering from
+                            the dimensions into the fact table, allowing the
+                            same transactional data to be analysed from
+                            multiple business perspectives.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- EXECUTIVE OVERVIEW -->
+        <section>
+
+            <div class="container">
+
+                <h2>Executive Overview</h2>
+
+                <p>
+                    The Executive Overview provides a high-level view of
+                    overall sales performance. Key measures such as revenue,
+                    orders, quantity sold, average order value and average
+                    selling price provide an immediate view of business
+                    performance.
+                </p>
+
+                <p>
+                    Revenue trends and category and territory breakdowns
+                    allow users to quickly identify changes in performance
+                    before exploring the more detailed report pages.
+                </p>
+
+                <img
+                    src="Images/Adventureworks/AdventureWorks - Overview.png"
+                    alt="AdventureWorks Executive Overview Power BI report"
+                >
+
+            </div>
+
+        </section>
+
+
+        <!-- PRODUCT PERFORMANCE -->
+        <section>
+
+            <div class="container">
+
+                <h2>Product Performance</h2>
+
+                <p>
+                    The Product Performance page explores sales at category,
+                    subcategory and individual product level. It identifies
+                    the products generating the greatest revenue and allows
+                    performance to be analysed over time.
+                </p>
+
+                <p>
+                    The report also includes SQL-based product analysis using
+                    CTEs and window functions to calculate year-on-year
+                    performance and all-time product rankings.
+                </p>
+
+                <img
+                    src="Images/Adventureworks/AdventureWorks - Product Performance.png"
+                    alt="AdventureWorks Product Performance Power BI report"
+                >
+
+                <img
+                    src="Images/Adventureworks/AdventureWorks - Product Performance 2.png"
+                    alt="AdventureWorks Product Performance Power BI report"
+                >
+
+            </div>
+
+        </section>
+
+
+        <!-- CUSTOMER & SALESPERSON -->
+        <section>
+
+            <div class="container">
+
+                <h2>Customer & Salesperson</h2>
+
+                <p>
+                    This page analyses the customers and salespeople
+                    contributing to sales performance. Users can identify
+                    high-value customers, compare customer order behaviour
+                    and evaluate salesperson revenue and average order value.
+                </p>
+
+                <p>
+                    The underlying model keeps customer and salesperson
+                    attributes in separate dimensions while the central sales
+                    fact table provides the transactional measures used
+                    throughout the analysis.
+                </p>
+
+                <img
+                    src="Images/Adventureworks/AdventureWorks - Customer and Salesperson.png"
+                    alt="AdventureWorks Customer and Salesperson Power BI report"
+                >
+
+                <img
+                    src="Images/Adventureworks/AdventureWorks - Customer and Salesperson2.png"
+                    alt="AdventureWorks Customer and Salesperson Power BI report"
+                >
+
+            </div>
+
+        </section>
+
+
+             <section>
+
+            <div class="container">
+
+                <h2>Sales & Territory</h2>
+
+                <p>
+                    The Sales & Territory page examines the geographical
+                    distribution of sales and compares the performance of
+                    individual territories.
+                </p>
+
+                <p>
+                    Revenue trends show how territories have changed over
+                    time, while the Revenue vs Average Order Value scatter
+                    chart provides a different perspective on territory
+                    performance by highlighting the relationship between
+                    overall revenue and order value.
+                </p>
+
+                <img
+                    src="Images/Adventureworks/AdventureWorks - Territory.png"
+                    alt="AdventureWorks Sales and Territory Power BI report"
+                >
+
+            </div>
+
+        </section>
+
+
+        <!-- SQL -->
+        <section id="sql">
+
+            <div class="container">
+
+                <h2>SQL Analysis</h2>
+
+                <p>
+                    SQL Server was used to prepare the core reporting data
+and one analytical view demonstrating advanced SQL
+techniques beyond basic aggregation.
+                </p>
+
+                <div class="skills">
+
+                    <div>
+                        <h3>CTEs</h3>
+                        <p>
+                            Common Table Expressions were used to structure
+                            multi-stage analytical queries and make complex
+                            transformations easier to read and maintain.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3>Window Functions</h3>
+                        <p>
+                            LAG and RANK were used to calculate previous-year
+                            performance, year-on-year changes and business
+                            rankings without losing the underlying row-level
+                            detail.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3>Performance Analysis</h3>
+                        <p>
+                            An analytical view was created to evaluate performance, including revenue, order counts, year-on-year growth and product ranking.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- POWER BI -->
+        <section>
+
+            <div class="container">
+
+                <h2>Power BI & DAX</h2>
+
+                <p>
+                    Power BI was used as the reporting and visualisation layer,
+                    with DAX measures providing reusable calculations that
+                    respond dynamically to report filters and slicers.
+                </p>
+
+                <p>
+                    Measures include total revenue, total orders, average
+                    order value, average selling price, year-on-year revenue
+                    growth and dynamic rankings.
+                </p>
+
+                <p>
+                    A dedicated Date dimension enables time-intelligence
+                    calculations such as previous-year revenue and year-on-year
+                    growth.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- BACK TO PROJECTS -->
+        <section>
+
+            <div class="container">
+
+                <a class="button" href="index.html">
+                    ← Back to Portfolio
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <div class="container">
+            <p>© 2026 Samuel Bridge</p>
+        </div>
+
+    </footer>
+
+</body>
+</html>
