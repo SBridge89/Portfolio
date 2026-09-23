@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AdventureWorks Sales Analytics | Samuel Bridge</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Samuel Bridge</h1>
+            <p>Business Intelligence Developer</p>
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="#overview">Overview</a>
+                <a href="#modelling">Data Modelling</a>
+                <a href="#sql">SQL</a>
+            </nav>
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- PROJECT INTRO -->
+        <section class="hero">
+
+            <div class="container">
+
+                <h2>AdventureWorks Sales Analytics</h2>
+
+                <p>
+                    An end-to-end SQL and Power BI sales analytics project
+                    using the AdventureWorks2022 dataset. The project
+                    demonstrates relational data preparation, star-schema
+                    modelling, DAX measures and advanced SQL analytical
+                    techniques.
+                </p>
+
+                <div class="tags">
+                    <span>SQL Server</span>
+                    <span>Power BI</span>
+                    <span>DAX</span>
+                    <span>Power Query</span>
+                    <span>Data Modelling</span>
+                    <span>Window Functions</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROJECT OVERVIEW -->
+        <section id="overview">
+
+            <div class="container">
+
+                <h2>Project Overview</h2>
+
+                <p>
+                    The aim of this project was to build an interactive sales
+                    reporting solution that allows users to explore overall
+                    sales performance, product performance, customer behaviour
+                    and territory performance.
+                </p>
+
+                <p>
+                    The underlying AdventureWorks relational database was
+                    transformed into a reporting data model before
+                    being brought into Power BI. The final report combines
+                    interactive DAX-based analysis with additional SQL
+                    analysis using CTEs and window functions.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- DATA MODELLING -->
+        <section id="modelling">
+
+            <div class="container">
+
+                <h2>Data Modelling</h2>
+
+                <p>
+                    The Power BI model was designed using a star-schema
+                    approach, with sales transactions stored at order-line
+                    level in a central fact table and descriptive attributes
+                    separated into dimension tables.
+                </p>
+
+                <div class="project">
+
+                    <div class="project-content">
+
+                        <h3>Star Schema</h3>
+
+                        <p>
+                            The core model consists of a central sales fact
+                            table connected to dedicated dimensions for
+                            customers, products, territories, salespeople
+                            and dates.
+                        </p>
+
+                        <ul>
+                            <li><strong>Sales_view</strong> – sales transactions at order-line grain</li>
+                            <li><strong>Date</strong> – calendar and time intelligence</li>
+                            <li><strong>Product view</strong> – products, categories and subcategories</li>
+                            <li><strong>Customer view</strong> – customer information</li>
+                            <li><strong>Territory view</strong> – geographical sales information</li>
+                            <li><strong>Sales person view</strong> – salesperson information</li>
+                            <li><strong>Product performance view</strong>  An SQL view using CTEs and window functions to analyse product performance.AdventureWorks.html</li>
+                        </ul>
+
+                        <p>
+                            Relationships use single-direction filtering from
+                            the dimensions into the fact table, allowing the
+                            same transactional data to be analysed from
+                            multiple business perspectives.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <section>
+
+            <div class="container">
+
+                <h2>Summary</h2>
+
+                <p>
+                    Provides an overview of the TMDB dataset, highlighting key movie, rating, popularity, voting and genre metrics. This page establishes the overall scale and characteristics of the dataset before exploring the more detailed analysis.
+                </p>
+
+
+
+                <img
+                    src="images/TMDB/TMDB - Summary.png"
+                    alt="TMDB Summary"
+                >
+
+            </div>
+
+        </section>
+
+
+        <!-- PRODUCT PERFORMANCE -->
+        <section>
+
+            <div class="container">
+
+                <h2>Genre and Language</h2>
+
+                <p>
+                   Explores the distribution of movies across genres and languages, identifying the most represented categories and examining how the dataset varies across different movie markets.
+                </p>
+
+
+
+                <img
+                    src="images/TMDB/Genre and Language.png"
+                    alt="TMDB Genre and Language"
+                >
+
+
+
+            </div>
+
+        </section>
+
+
+
+        <section>
+
+            <div class="container">
+
+                <h2>Vote Share</h2>
+
+                <p>
+                   Analyses how audience voting is distributed across the dataset, highlighting the movies and genres that account for the largest share of total votes and providing insight into audience engagement.
+                </p>
+
+
+
+                <img
+                    src="images/TMDB/TMDB - Vote Share.png"
+                    alt="TMDB Vote Share"
+                >
+
+
+            </div>
+
+        </section>
+
+
+
+        <section>
+
+            <div class="container">
+
+                <h2>Genre Analysis</h2>
+
+                <p>
+                    Examines movie performance across genres, comparing ratings, popularity, movie volumes and audience engagement to identify differences in how genres perform within the dataset.
+                </p>
+
+
+
+                <img
+                    src="images/TMDB/TMDB - Genre Analysis.png"
+                    alt="TMDB Genre Analysis"
+                >
+
+            </div>
+
+        </section>
+
+
+
+
+         <section>
+
+            <div class="container">
+
+                <h2>Movie Performance Analysis</h2>
+
+                <p>
+                    Evaluates movie performance using rating, popularity and voting metrics. Includes a comparison against a qualified rating benchmark, a Movie Quality Index combining rating and popularity, and analysis of how movie popularity is concentrated across different levels of audience voting.
+                </p>
+
+
+
+                <img
+                    src="images/TMDB/TMDB - Movie Performance Analysis.png"
+                    alt="TMDB Movie Performance Analysis"
+                >
+
+            </div>
+
+        </section>
+
+
+
+         <section>
+
+            <div class="container">
+
+                <h2>Year Over Year Analysis</h2>
+
+                <p>
+                    Analyses changes in movie releases and audience ratings over time, using year-over-year measures to identify changes in production volume and average movie performance.
+                </p>
+
+
+
+                <img
+                    src="images/TMDB/TMDB - Year Over Year.png"
+                    alt="TMDB - Year Over Year"
+                >
+
+            </div>
+
+        </section>
+
+
+           <section>
+
+            <div class="container">
+
+                <h2>Rolling Average and Rank Within Genre</h2>
+
+                <p>
+                    Uses a three-year rolling average to examine longer-term changes in movie ratings while ranking movies within their respective genres. This provides both a broader view of rating trends and a more focused comparison of individual movie performance.
+                </p>
+
+
+
+                <img
+                    src="images/TMDB/TMDB - Rolling Average and Rank Within Genre.png"
+                    alt="TMDB - Rolling Average and Rank Within Genre"
+                >
+
+                 <img
+                    src="images/TMDB/TMDB - Rolling Average and Rank Within Genre 2.png"
+                    alt="TMDB - Rolling Average and Rank Within Genre 2 "
+                >
+
+            </div>
+
+        </section>
+
+
+
+        <section>
+
+            <div class="container">
+
+                <h2>Movie Rating Outlier Analysis</h2>
+
+                <p>
+                    Identifies movies whose rating and popularity differ substantially from the overall dataset, highlighting high-popularity/low-rating and low-popularity/high-rating outliers for further investigation.
+                </p>
+
+
+
+                <img
+                    src="images/TMDB/TMDB - Movie Performance Analysis.png"
+                    alt="Movie Rating Outlier Analysis"
+                >
+
+            </div>
+
+        </section>
+
+
+           <section>
+
+            <div class="container">
+
+                <h2>Genre Contribution to Rating Distribution</h2>
+
+                <p>
+                    Explores how individual genres contribute to the overall distribution of movie ratings, considering both their share of the movie population and their contribution to audience voting.
+                </p>
+
+
+
+                <img
+                    src="images/TMDB/TMDB - Genre Contribution to Rating Distribution.png"
+                    alt="TMDB - Genre Contribution to Rating Distribution"
+                >
+
+            </div>
+
+        </section>
+
+
+           <section>
+
+            <div class="container">
+
+                <h2>Time-Based Cohort Comparison</h2>
+
+                <p>
+                    Groups movies into release-period cohorts to compare how different generations of movies perform across rating, popularity, voting and movie volume metrics.
+                </p>
+
+
+
+                <img
+                    src="images/TMDB/TMDB - Time-based cohort comparison.png"
+                    alt="TMDB - Time-based cohort comparison"
+                >
+
+            </div>
+
+        </section>
+
+
+            <section>
+
+            <div class="container">
+
+                <h2>Hit Ratio</h2>
+
+                <p>
+                    Measures the proportion of movies within each genre that achieve a defined rating threshold, providing a consistent way to compare the frequency of higher-rated movies across genres.
+                </p>
+
+
+
+                <img
+                    src="images/TMDB/TMDB - Hit Ratio.png"
+                    alt="TMDB - Hit Ratio"
+                >
+
+            </div>
+
+        </section>
+
+        <!-- SQL -->
+        <section id="sql">
+
+            <div class="container">
+
+                <h2>SQL Analysis</h2>
+
+                <p>
+                    SQL Server was used to prepare the core reporting data
+and one analytical view demonstrating advanced SQL
+techniques beyond basic aggregation.
+                </p>
+
+                <div class="skills">
+
+                    <div>
+                        <h3>CTEs</h3>
+                        <p>
+                            Common Table Expressions were used to structure
+                            multi-stage analytical queries and make complex
+                            transformations easier to read and maintain.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3>Window Functions</h3>
+                        <p>
+                            LAG and RANK were used to calculate previous-year
+                            performance, year-on-year changes and business
+                            rankings without losing the underlying row-level
+                            detail.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3>Performance Analysis</h3>
+                        <p>
+                            An analytical view was created to evaluate performance, including revenue, order counts, year-on-year growth and product ranking.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- POWER BI -->
+        <section>
+
+            <div class="container">
+
+                <h2>Power BI & DAX</h2>
+
+                <p>
+                    Power BI was used as the reporting and visualisation layer,
+                    with DAX measures providing reusable calculations that
+                    respond dynamically to report filters and slicers.
+                </p>
+
+                <p>
+                    Measures include total revenue, total orders, average
+                    order value, average selling price, year-on-year revenue
+                    growth and dynamic rankings.
+                </p>
+
+                <p>
+                    A dedicated Date dimension enables time-intelligence
+                    calculations such as previous-year revenue and year-on-year
+                    growth.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- BACK TO PROJECTS -->
+        <section>
+
+            <div class="container">
+
+                <a class="button" href="index.html">
+                    ← Back to Portfolio
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <div class="container">
+            <p>© 2026 Samuel Bridge</p>
+        </div>
+
+    </footer>
+
+</body>
+</html>
